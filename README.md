@@ -70,7 +70,7 @@ O objetivo é classificar se ocorrerá um incidente nos próximos *H* passos, a 
    jupyter notebook Projeto_Final_Redes_Neurais_I.ipynb
    ```
    ou abra diretamente no Colab:  
-   [Abrir no Google Colab](https://colab.research.google.com/drive/1WptPo62fccMqQfsGJZYBKa_s0bkG6uxr#scrollTo=4k1KLZQHsqnt)
+   [Abrir no Google Colab](https://colab.research.google.com/drive/1WptPo62fccMqQfsGJZYBKa_s0bkG6uxr)
 
 ---
 
