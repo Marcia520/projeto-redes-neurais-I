@@ -79,5 +79,3 @@ Este estudo mostra que redes neurais artificiais podem ser integradas a pipeline
 O LSTM se mostrou superior ao MLP em recall e F1-Score, confirmando sua adequação para séries temporais.  
 Em ambientes bancários reais, seria necessário escalar para milhões de métricas e arquiteturas mais robustas, mas o conceito demonstrado aqui é totalmente aplicável.
 ```
-
----
