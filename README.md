@@ -59,7 +59,7 @@ O objetivo é classificar se ocorrerá um incidente nos próximos *H* passos, a 
 ### 🚀 Como executar
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seuusuario/projeto-redes-neurais-I.git
+   git clone https://github.com/Marcia520/projeto-redes-neurais-I.git
    ```
 2. Instale as dependências:
    ```bash
