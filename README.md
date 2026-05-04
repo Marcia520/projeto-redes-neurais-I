@@ -50,9 +50,11 @@ O objetivo é classificar se ocorrerá um incidente nos próximos *H* passos, a 
 ---
 
 ### 📌 Discussão
-- **Limitações:** dataset sintético simplificado, heurística de rotulagem básica.  
+- **Limitações:** O dataset sintético não captura toda a complexidade de ambientes reais e a rotulagem baseada em heurística pode inflar a prevalência da classe positiva. Trabalhos futuros podem calibrar a taxa base de incidentes e o horizonte H para simular cenários com maior ou menor raridade, além de explorar arquiteturas como CNNs e Transformers.
 - **Melhorias futuras:** CNNs para séries temporais, Transformers, integração com logs, ajuste de thresholds, escala para milhões de registros.  
 - **Conformidade regulatória:** uso de dados sintéticos garante aderência à LGPD e Resolução BCB nº 304/2023.
+- **Observação sobre a prevalência do rótulo:** Em ambientes bancários reais, incidentes críticos são de fato eventos raros. No entanto, neste trabalho o rótulo `incident_in_next_H` marca 1 quando ocorre pelo menos um incidente nos próximos H passos. Essa agregação temporal aumenta a prevalência da classe positiva, tornando os alertas mais frequentes do que os incidentes individuais. Isso é consistente com práticas de AIOps, nas quais o objetivo é antecipar condições de risco e não apenas detectar falhas já ocorridas.
+
 
 ---
 
@@ -75,7 +77,5 @@ O objetivo é classificar se ocorrerá um incidente nos próximos *H* passos, a 
 ---
 
 ### 📌 Conclusão
-Este estudo mostra que redes neurais artificiais podem ser integradas a pipelines de observabilidade em bancos para antecipar falhas e incidentes.  
-O LSTM se mostrou superior ao MLP em recall e F1-Score, confirmando sua adequação para séries temporais.  
-Em ambientes bancários reais, seria necessário escalar para milhões de métricas e arquiteturas mais robustas, mas o conceito demonstrado aqui é totalmente aplicável.
+Este projeto demonstrou que redes neurais artificiais podem apoiar o monitoramento preditivo de incidentes em ambientes bancários cloud-native. A comparação entre MLP e LSTM evidenciou que modelos sequenciais capturam melhor dependências temporais. Embora incidentes reais sejam raros, a formulação com horizonte de previsão gera alertas preventivos mais frequentes, alinhados às práticas modernas de AIOps e à resiliência operacional exigida no setor financeiro.
 ```
