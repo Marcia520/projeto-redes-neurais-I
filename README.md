@@ -72,22 +72,24 @@ pip install -r requirements.txt
 
 ---
 
-###  Estrutura do Repositório
-projeto-redes-neurais-I
+## Estrutura do Repositório
+### projeto-redes-neurais-I
+
 ├── Projeto_Final_Redes_Neurais_I.ipynb   # Notebook principal
 ├── requirements.txt                      # Dependências
 └── README.md                             # Documentação
 
 
-### Como executar
+## Como executar
+
 1. Clone este repositório:
-   ```bash
+   
    git clone https://github.com/Marcia520/projeto-redes-neurais-I.git
-   ```
+   
 2. Abra o notebook no Jupyter ou Google Colab:
-   ```bash
+   
    jupyter notebook Projeto_Final_Redes_Neurais_I.ipynb
-   ```
+   
    ou abra diretamente no Colab:  
    [Abrir no Google Colab](https://colab.research.google.com/drive/1WptPo62fccMqQfsGJZYBKa_s0bkG6uxr)
 
