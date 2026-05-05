@@ -72,9 +72,13 @@ pip install -r requirements.txt
 
 ---
 
-## Estrutura do Repositório
-### projeto-redes-neurais-I
 
+---
+
+### Estrutura do Repositório
+```markdown
+## Estrutura do Repositório
+projeto-redes-neurais-I
 ├── Projeto_Final_Redes_Neurais_I.ipynb   # Notebook principal
 ├── requirements.txt                      # Dependências
 └── README.md                             # Documentação
