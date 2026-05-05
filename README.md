@@ -39,11 +39,6 @@ O objetivo é classificar se ocorrerá um incidente nos próximos *H* passos, a 
 
 | Modelo | Acurácia | Recall | Precisão | F1-Score | ROC-AUC | PR-AUC |
 |--------|----------|--------|----------|----------|---------|--------|
-| MLP    | 0.517    | 0.559  | 0.657    | 0.604    | 0.498   | 0.659  |
-| LSTM   | 0.551    | 0.734  | 0.639    | 0.683    | 0.435   | 0.615  |
-
-| Modelo | Acurácia | Recall | Precisão | F1-Score | ROC-AUC | PR-AUC |
-|--------|----------|--------|----------|----------|---------|--------|
 | MLP    | 0.552    | 0.537  | 0.712    | 0.612    | 0.577   | 0.717  |
 | LSTM   | 0.554    | 0.543  | 0.712    | 0.616    | 0.570   | 0.713  |
 
