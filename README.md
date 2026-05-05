@@ -67,7 +67,7 @@ O objetivo é classificar se ocorrerá um incidente nos próximos *H* passos, a 
 - Matplotlib
 ---
 
-### 🚀 Como executar
+### Como executar
 1. Clone este repositório:
    ```bash
    git clone https://github.com/Marcia520/projeto-redes-neurais-I.git
