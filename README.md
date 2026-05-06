@@ -107,6 +107,19 @@ O objetivo é classificar se ocorrerá um incidente nos próximos *H* passos, a 
 
 ---
 
+### Acesso Online
+
+A aplicação está publicada no Streamlit Cloud:
+
+ [Abrir aplicação](https://projeto-redes-neurais-I.streamlit.app)
+
+Basta acessar o link acima para utilizar a interface interativa sem precisar instalar nada localmente.
+
+Na interface você poderá:
+- Selecionar o modelo (MLP ou LSTM)
+- Inserir métricas de observabilidade (CPU, memória, taxa de erros, latência p95)
+- Visualizar a previsão de incidente em tempo real
+
 ### Exemplo de uso da aplicação Streamlit
 
 Ao rodar o comando:
