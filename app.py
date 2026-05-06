@@ -11,7 +11,7 @@ st.title("Previsão de Incidentes Bancários - AIOps")
 
 st.markdown("""
 Aplicação baseada em Redes Neurais para prever se haverá **incidente** 
-nos próximos passos, com base em métricas de observabilidade.
+nos próximos meses, com base em métricas de observabilidade.
 """)
 
 # Escolha do modelo
@@ -32,17 +32,19 @@ X_input_scaled = scaler.transform(X_input)
 
 # Previsão
 if modelo_escolhido == "MLP":
-    proba = mlp.predict_proba(X_input_scaled)[0][1]
-    pred = (proba >= 0.5).astype(int)
+    # Ajuste para formato (1, 30, 4)
+    X_seq = np.repeat(X_input_scaled[np.newaxis, :, :], 30, axis=1)  # (1, 30, 4)
+    proba = mlp.predict(X_seq)[0][0]
+    pred = int(proba >= 0.5)
 else:
-    # Para LSTM, reshape para sequência (1 janela, 30 passos, 4 features)
-    # Aqui simplificamos para 1 passo, mas você pode adaptar
-    X_seq = np.expand_dims(X_input_scaled, axis=1)  
+    # LSTM também espera (1, 30, 4)
+    X_seq = np.repeat(X_input_scaled[np.newaxis, :, :], 30, axis=1)  # (1, 30, 4)
     proba = lstm.predict(X_seq)[0][0]
-    pred = (proba >= 0.5).astype(int)
+    pred = int(proba >= 0.5)
 
 # Saída
 st.subheader("Resultado da Previsão")
 st.write("Modelo usado:", modelo_escolhido)
 st.write("Probabilidade de incidente:", round(float(proba), 3))
 st.write("Classificação:", "🚨 Incidente" if pred == 1 else "✅ Normal")
+
