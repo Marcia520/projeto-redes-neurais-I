@@ -85,83 +85,31 @@ O objetivo é classificar se ocorrerá um incidente nos próximos *H* passos, a 
 
 ---
 
-### Como executar a aplicação Streamlit
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/Marcia520/projeto-redes-neurais-I.git
-   cd projeto-redes-neurais-I
-   ```
-2. Instale as dependências:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Execute a aplicação:
-   ```bash
-   streamlit run app.py
-   ```
-4. Acesse no navegador:
-   ```
-   http://localhost:8501
-   ```
-5. Na interface, selecione o modelo desejado (**MLP** ou **LSTM**) e insira os valores de CPU, memória, taxa de erros e latência p95 para obter a previsão.
+### Exemplo de uso da aplicação
 
----
+#### Acesso Online
+Acesse diretamente no Hugging Face Spaces: 
 
-### Acesso Online
+Abrir aplicação  [![Hugging Face Spaces](https://img.shields.io/badge/🤗-Hugging%20Face%20Spaces-blue)](https://huggingface.co/spaces/marciana318798/redes_neurais_I)
 
-A aplicação está publicada no Streamlit Cloud:
+Na interface você poderá:  
+1. Selecionar o modelo (**MLP** ou **LSTM**)  
+2. Inserir métricas de observabilidade (CPU, memória, taxa de erros, latência p95)  
+3. Visualizar a previsão de incidente em tempo real  
 
- [Abrir aplicação](https://projeto-redes-neurais-I.streamlit.app)
-
-Basta acessar o link acima para utilizar a interface interativa sem precisar instalar nada localmente.
-
-Na interface você poderá:
-- Selecionar o modelo (MLP ou LSTM)
-- Inserir métricas de observabilidade (CPU, memória, taxa de erros, latência p95)
-- Visualizar a previsão de incidente em tempo real
-
-### Exemplo de uso da aplicação Streamlit
-
-Ao rodar o comando:
-
-```bash
-streamlit run app.py
-```
-
-A aplicação abrirá no navegador em `http://localhost:8501`.  
-
-Na interface, você poderá:
-
-1. **Selecionar o modelo**:  
-   - `MLP` (baseline)  
-   - `LSTM` (principal)  
-
-2. **Inserir métricas de observabilidade**:  
-   - Uso de CPU (%)  
-   - Uso de Memória (%)  
-   - Taxa de Erros  
-   - Latência p95 (ms)  
-
-3. **Visualizar a previsão**:  
-   - Probabilidade de incidente (valor entre 0 e 1).  
-   - Classificação binária:  
-     - ✅ Normal  
-     - 🚨 Incidente  
-
-**Exemplo de entrada:**
+**Exemplo de entrada:**  
 - CPU: 85%  
 - Memória: 90%  
 - Taxa de erros: 5  
 - Latência p95: 350 ms  
 - Modelo escolhido: **LSTM**
 
-**Saída esperada:**
+**Saída esperada:**  
 ```
 Modelo usado: LSTM
 Probabilidade de incidente: 0.82
 Classificação: 🚨 Incidente
 ```
-
 ---
 
 ### Conclusão
