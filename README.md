@@ -82,6 +82,73 @@ O objetivo é classificar se ocorrerá um incidente nos próximos *H* passos, a 
    ```
    ou abra diretamente no Colab:  
    [Abrir no Google Colab](https://colab.research.google.com/drive/1WptPo62fccMqQfsGJZYBKa_s0bkG6uxr)
+
+---
+
+### Como executar a aplicação Streamlit
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/Marcia520/projeto-redes-neurais-I.git
+   cd projeto-redes-neurais-I
+   ```
+2. Instale as dependências:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Execute a aplicação:
+   ```bash
+   streamlit run app.py
+   ```
+4. Acesse no navegador:
+   ```
+   http://localhost:8501
+   ```
+5. Na interface, selecione o modelo desejado (**MLP** ou **LSTM**) e insira os valores de CPU, memória, taxa de erros e latência p95 para obter a previsão.
+
+---
+
+### Exemplo de uso da aplicação Streamlit
+
+Ao rodar o comando:
+
+```bash
+streamlit run app.py
+```
+
+A aplicação abrirá no navegador em `http://localhost:8501`.  
+
+Na interface, você poderá:
+
+1. **Selecionar o modelo**:  
+   - `MLP` (baseline)  
+   - `LSTM` (principal)  
+
+2. **Inserir métricas de observabilidade**:  
+   - Uso de CPU (%)  
+   - Uso de Memória (%)  
+   - Taxa de Erros  
+   - Latência p95 (ms)  
+
+3. **Visualizar a previsão**:  
+   - Probabilidade de incidente (valor entre 0 e 1).  
+   - Classificação binária:  
+     - ✅ Normal  
+     - 🚨 Incidente  
+
+**Exemplo de entrada:**
+- CPU: 85%  
+- Memória: 90%  
+- Taxa de erros: 5  
+- Latência p95: 350 ms  
+- Modelo escolhido: **LSTM**
+
+**Saída esperada:**
+```
+Modelo usado: LSTM
+Probabilidade de incidente: 0.82
+Classificação: 🚨 Incidente
+```
+
 ---
 
 ### Conclusão
